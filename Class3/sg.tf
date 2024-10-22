@@ -2,6 +2,8 @@ resource "aws_security_group" "allow_tls" {
   name        = "allow_tls"
   description = "Allow TLS inbound traffic"
 
+
+  tags = local.common_tags
     ingress {
     description      = "TLS from VPC"
     from_port        = 80
